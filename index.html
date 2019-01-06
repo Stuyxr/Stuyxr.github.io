@@ -367,7 +367,7 @@
                 
               
 
-              <time title="创建时间：2019-01-06 03:06:18 / 修改时间：13:50:32" itemprop="dateCreated datePublished" datetime="2019-01-06T03:06:18+08:00">2019-01-06</time>
+              <time title="创建时间：2019-01-06 03:06:18 / 修改时间：14:11:12" itemprop="dateCreated datePublished" datetime="2019-01-06T03:06:18+08:00">2019-01-06</time>
             
 
             
@@ -477,11 +477,22 @@
 </div>
 <h2 id="本章小结"><a href="#本章小结" class="headerlink" title="本章小结"></a>本章小结</h2><p>hello.c经过预处理、编译、汇编、链接四个阶段变成可执行文件hello，再通过shell执行可执行文件hello，然后再被回收，体现了程序从无到有的过程。</p>
 <h1 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h1><h2 id="预处理的概念与作用"><a href="#预处理的概念与作用" class="headerlink" title="预处理的概念与作用"></a>预处理的概念与作用</h2><p>预处理器（cpp）根据以字符#开头的命令（directives），修改原始的C程序。如hello.c中#include <stdio.h>指令告诉预处理器读系统头文件stdio.h的内容，并把它直接插入到程序文本中去。结果就得到另外一个C程序，通常是以.i作为文件扩展名的。</stdio.h></p>
-<p>预处理的作用有：<br>①将头文件的内容，直接插入到程序文本中。<br>②将符号常量替换为后边的文本，常见的有宏定义常数、宏定义符号、宏定义函数等等。<br>③删除所有注释。<br>④添加行号和文件标识符。用于显示调试信息：错误或警告的位置。<br>⑤处理条件预编译 #if, #ifdef, #if, #elif,#endif<br>⑥保留#pragma编译器指令。（1）设定编译器状态，（2）指示编译器完成一些特定的动作。</p>
-<h2 id="在Ubuntu下预处理的命令"><a href="#在Ubuntu下预处理的命令" class="headerlink" title="在Ubuntu下预处理的命令"></a>在Ubuntu下预处理的命令</h2><p>gcc -E hello.c -o hello.i</p>
-<img src="/2019/01/06/程序人生-Hello-s-P2P/2019/01/06/程序人生-Hello-s-P2P/2-1.png" title="在Ubuntu下预处理的命令">
-<h2 id="Hello的预处理结果解析"><a href="#Hello的预处理结果解析" class="headerlink" title="Hello的预处理结果解析"></a>Hello的预处理结果解析</h2><img src="/2019/01/06/程序人生-Hello-s-P2P/2019/01/06/程序人生-Hello-s-P2P/2-2.png" title="预处理结果hello.i文件（部分）">
-<p>我们发现①注释被删除了②头文件信息已经被插入到了hello.i中，而且文件变成了3118行（由于插入了头文件的代码）。<br>gcc先打开stdio.h然后发现里面还有#define，就继续打开，直到最后的文件中没有#difine为止。在这之间会有大量的typedef重命名，以及定义大量文件输入输出指针等等。</p>
+<p>预处理的作用有：</p>
+<ol>
+<li>将头文件的内容，直接插入到程序文本中。</li>
+<li>将符号常量替换为后边的文本，常见的有宏定义常数、宏定义符号、宏定义函数等等。</li>
+<li>删除所有注释。</li>
+<li>添加行号和文件标识符。用于显示调试信息：错误或警告的位置。</li>
+<li>处理条件预编译 #if, #ifdef, #if, #elif,#endif</li>
+<li>保留#pragma编译器指令。（1）设定编译器状态，（2）指示编译器完成一些特定的动作。</li>
+</ol>
+<h2 id="在Ubuntu下预处理的命令"><a href="#在Ubuntu下预处理的命令" class="headerlink" title="在Ubuntu下预处理的命令"></a>在Ubuntu下预处理的命令</h2><p>gcc -E hello.c -o hello.i<br><img src="https://stuyxr.com/Picture/2-1.png" alt="在Ubuntu下预处理的命令"></p>
+<h2 id="Hello的预处理结果解析"><a href="#Hello的预处理结果解析" class="headerlink" title="Hello的预处理结果解析"></a>Hello的预处理结果解析</h2><p><img src="https://stuyxr.com/Picture/2-2.png" alt="预处理结果hello.i文件（部分）"></p>
+<p>我们发现</p>
+<ol>
+<li>注释被删除了</li>
+<li>头文件信息已经被插入到了hello.i中，而且文件变成了3118行（由于插入了头文件的代码）。<br>gcc先打开stdio.h然后发现里面还有#define，就继续打开，直到最后的文件中没有#difine为止。在这之间会有大量的typedef重命名，以及定义大量文件输入输出指针等等。</li>
+</ol>
 
           
         
@@ -938,8 +949,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
                     
                       
                     
