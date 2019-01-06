@@ -16,7 +16,7 @@
 
 <html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -159,7 +159,7 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
 </head>
 
@@ -170,7 +170,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
+  <div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
 
@@ -367,7 +367,7 @@
                 
               
 
-              <time title="创建时间：2019-01-06 03:06:18 / 修改时间：13:00:31" itemprop="dateCreated datePublished" datetime="2019-01-06T03:06:18+08:00">2019-01-06</time>
+              <time title="创建时间：2019-01-06 03:06:18 / 修改时间：13:20:38" itemprop="dateCreated datePublished" datetime="2019-01-06T03:06:18+08:00">2019-01-06</time>
             
 
             
@@ -430,7 +430,7 @@
           
             <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="Hello简介"><a href="#Hello简介" class="headerlink" title="Hello简介"></a>Hello简介</h2><p>根据Hello的自白，利用计算机系统的术语，简述Hello的P2P，020的整个过程。<br>P2P : From Program to Process. hello.c经过预处理器cpp预处理成hello.i，再经过编译器ccl变成hello.s，再经过汇编器as变成hello.o，最后经过链接器ld与C library进行链接，最终变成hello。此时的hello成为了一个program。shell通过键盘键入”./hello”，此时hello变成了一个process，shell为它fork一个子进程，并excve hello这个进程。这就是P2P的过程。<br>020 : From Zero-0 to Zero-0. Shell执行可执行目标文件hello，并创建一组新的代码、数据、堆和栈段。新的栈和堆段被初始化为零。执行hello的过程中，堆、栈段大小发生变化。在hello执行完成后，父进程shell回收子进程hello，IO管理与信号处理通过软硬结合，将其输出显示到屏幕。堆栈信息恢复到执行hello之前的状态，也就是执行hello前后堆栈信息没有改变，这就是020的过程。</p>
 <h2 id="环境与工具"><a href="#环境与工具" class="headerlink" title="环境与工具"></a>环境与工具</h2><p>硬件环境：X64CPU; 2.60GHz; 8GRAM;<br>软件环境：Windows10 64位；Vmware 14；Ubuntu 18.04 LTS 64位<br>开发与调试工具：gedit; vi; gcc; as; ld; gdb; readelf; hexedit</p>
-<h2 id="中间结果"><a href="#中间结果" class="headerlink" title="中间结果"></a>中间结果</h2><p>列出你为编写本论文，生成的中间结果文件的名字，文件的作用等。<br>|文件|内容|<br>|———|———|<br>|hello.i|预处理过的源程序|<br>|hello.s|汇编程序|<br>|hello.o|可重定位目标程序|<br>|hello|可执行程序|<br>|hello_o.elf|hello.o通过readelf查看的elf结构文本|<br>|hello.elf|hello通过readelf查看的elf结构文本|<br>|hello_o.asm|hello.o通过objdump查看的反汇编文本|<br>|hello.asm|hello通过objdump查看的反汇编文本|</p>
+<h2 id="中间结果"><a href="#中间结果" class="headerlink" title="中间结果"></a>中间结果</h2><p>列出你为编写本论文，生成的中间结果文件的名字，文件的作用等。<br>|:文件:|:内容:|<br>|———|———|<br>|hello.i|预处理过的源程序|<br>|hello.s|汇编程序|<br>|hello.o|可重定位目标程序|<br>|hello|可执行程序|<br>|hello_o.elf|hello.o通过readelf查看的elf结构文本|<br>|hello.elf|hello通过readelf查看的elf结构文本|<br>|hello_o.asm|hello.o通过objdump查看的反汇编文本|<br>|hello.asm|hello通过objdump查看的反汇编文本|</p>
 <h2 id="本章小结"><a href="#本章小结" class="headerlink" title="本章小结"></a>本章小结</h2><p>hello.c经过预处理、编译、汇编、链接四个阶段变成可执行文件hello，再通过shell执行可执行文件hello，然后再被回收，体现了程序从无到有的过程。</p>
 
           
@@ -606,7 +606,7 @@
       
         
           
-            <p>错过了CF的Goodbye 2018，难受。<br>2018可能在yxr的一生中不算起眼的一年，虽然这一年本来想活的精彩的，但显然没有达成。<br>马上20岁的yxr好像对未来的规划依然不是很清晰，作为一个程序员，除了会做算法题，似乎没什么值得提及的，而且在ACM届也是个菜鸡。<br>现在的我和2018年初的我相比，似乎也没变什么，无论知识还是规划，所以总结2018，只能想到哪说哪了。<br>首先是CS相关。<br>2018前半年在颓废中度过，学了一些课，并不是很硬和，每天都很浪。<br>参加了四省赛和女生赛，女生赛打的我想打人，不过过去了就来年再战吧。<br>小学期用Github+Hexo搭了博客，还买了个域名。折腾了一下双系统。这绝对是我最后悔的事。第一次搭双系统什么都不懂的我果然还是GG了。然后继续按照教程来，乱搞居然搞好了。然而9月份来学校某一天又GG了。最后还是向虚拟机低头了。<br>新的学期课好多。依旧很颓废，是更颓废了：基本除了CSAPP不咋上课。CSAPP比较硬核也比较重要。但是自己<del>太软了</del>。。。虽然花在这门课上很多时间，但很多知识依然不太懂。参加了CCPC和ICPC，得了Ag和Cu。觉得沈阳站比较可惜吧。明年大概还要一战。参加了谷歌x牛客女生赛，题面10000个锅，初试排名也比较炸。还参加了面试，结果还没出，但感觉面试表现的一般。<br>新的一年希望可以去谷歌实习qaq，自己学习一些机器学习相关的知识，希望可以有一些项目经历。诶，好像也不太容易实现。<br>其次生活相关。<br>情商-inf的yxr总是会做出一些让别人伤心的事。好吧，向所有我伤害过的人说一声抱歉。<br>新的一年的yxr争取不会伤别人的心了。新的一年的yxr希望不要经常的丧。新的一年的yxr还要争取不经常熬夜。最近考试周就算了，寒假一定要调整过来。<br>Hello, 2019.<br><img src="/2019/01/01/Goodbye-2018/x.jpg" title="qaq"></p>
+            <p>错过了CF的Goodbye 2018，难受。<br>2018可能在yxr的一生中不算起眼的一年，虽然这一年本来想活的精彩的，但显然没有达成。<br>马上20岁的yxr好像对未来的规划依然不是很清晰，作为一个程序员，除了会做算法题，似乎没什么值得提及的，而且在ACM届也是个菜鸡。<br>现在的我和2018年初的我相比，似乎也没变什么，无论知识还是规划，所以总结2018，只能想到哪说哪了。<br>首先是CS相关。<br>2018前半年在颓废中度过，学了一些课，并不是很硬和，每天都很浪。<br>参加了四省赛和女生赛，女生赛打的我想打人，不过过去了就来年再战吧。<br>小学期用Github+Hexo搭了博客，还买了个域名。折腾了一下双系统。这绝对是我最后悔的事。第一次搭双系统什么都不懂的我果然还是GG了。然后继续按照教程来，乱搞居然搞好了。然而9月份来学校某一天又GG了。最后还是向虚拟机低头了。<br>新的学期课好多。依旧很颓废，是更颓废了：基本除了CSAPP不咋上课。CSAPP比较硬核也比较重要。但是自己<del>太软了</del>。。。虽然花在这门课上很多时间，但很多知识依然不太懂。参加了CCPC和ICPC，得了Ag和Cu。觉得沈阳站比较可惜吧。明年大概还要一战。参加了谷歌x牛客女生赛，题面10000个锅，初试排名也比较炸。还参加了面试，结果还没出，但感觉面试表现的一般。<br>新的一年希望可以去谷歌实习qaq，自己学习一些机器学习相关的知识，希望可以有一些项目经历。诶，好像也不太容易实现。<br>其次生活相关。<br>情商-inf的yxr总是会做出一些让别人伤心的事。好吧，向所有我伤害过的人说一声抱歉。<br>新的一年的yxr争取不会伤别人的心了。新的一年的yxr希望不要经常的丧。新的一年的yxr还要争取不经常熬夜。最近考试周就算了，寒假一定要调整过来。<br>Hello, 2019.<br><img src="/2019/01/01/Goodbye-2018/2019/01/01/Goodbye-2018/x.jpg" title="qaq"></p>
 
           
         
@@ -1233,24 +1233,7 @@
 .MathJax_Display {
   overflow: auto hidden;
 }
-</style><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+</style>
 
     
   

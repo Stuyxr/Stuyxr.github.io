@@ -16,7 +16,7 @@
 
 <html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+  <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Stuyxr&#39;s Blog">
 <meta property="og:description" content="概述Hello简介根据Hello的自白，利用计算机系统的术语，简述Hello的P2P，020的整个过程。P2P : From Program to Process. hello.c经过预处理器cpp预处理成hello.i，再经过编译器ccl变成hello.s，再经过汇编器as变成hello.o，最后经过链接器ld与C library进行链接，最终变成hello。此时的hello成为了一个progr">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-06T05:00:31.015Z">
+<meta property="og:updated_time" content="2019-01-06T05:20:38.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序人生-Hello&#39;s P2P">
 <meta name="twitter:description" content="概述Hello简介根据Hello的自白，利用计算机系统的术语，简述Hello的P2P，020的整个过程。P2P : From Program to Process. hello.c经过预处理器cpp预处理成hello.i，再经过编译器ccl变成hello.s，再经过汇编器as变成hello.o，最后经过链接器ld与C library进行链接，最终变成hello。此时的hello成为了一个progr">
@@ -161,7 +161,7 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</noscript>
 
 </head>
 
@@ -172,7 +172,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -366,7 +366,7 @@
                 
               
 
-              <time title="创建时间：2019-01-06 03:06:18 / 修改时间：13:00:31" itemprop="dateCreated datePublished" datetime="2019-01-06T03:06:18+08:00">2019-01-06</time>
+              <time title="创建时间：2019-01-06 03:06:18 / 修改时间：13:20:38" itemprop="dateCreated datePublished" datetime="2019-01-06T03:06:18+08:00">2019-01-06</time>
             
 
             
@@ -427,7 +427,7 @@
       
         <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="Hello简介"><a href="#Hello简介" class="headerlink" title="Hello简介"></a>Hello简介</h2><p>根据Hello的自白，利用计算机系统的术语，简述Hello的P2P，020的整个过程。<br>P2P : From Program to Process. hello.c经过预处理器cpp预处理成hello.i，再经过编译器ccl变成hello.s，再经过汇编器as变成hello.o，最后经过链接器ld与C library进行链接，最终变成hello。此时的hello成为了一个program。shell通过键盘键入”./hello”，此时hello变成了一个process，shell为它fork一个子进程，并excve hello这个进程。这就是P2P的过程。<br>020 : From Zero-0 to Zero-0. Shell执行可执行目标文件hello，并创建一组新的代码、数据、堆和栈段。新的栈和堆段被初始化为零。执行hello的过程中，堆、栈段大小发生变化。在hello执行完成后，父进程shell回收子进程hello，IO管理与信号处理通过软硬结合，将其输出显示到屏幕。堆栈信息恢复到执行hello之前的状态，也就是执行hello前后堆栈信息没有改变，这就是020的过程。</p>
 <h2 id="环境与工具"><a href="#环境与工具" class="headerlink" title="环境与工具"></a>环境与工具</h2><p>硬件环境：X64CPU; 2.60GHz; 8GRAM;<br>软件环境：Windows10 64位；Vmware 14；Ubuntu 18.04 LTS 64位<br>开发与调试工具：gedit; vi; gcc; as; ld; gdb; readelf; hexedit</p>
-<h2 id="中间结果"><a href="#中间结果" class="headerlink" title="中间结果"></a>中间结果</h2><p>列出你为编写本论文，生成的中间结果文件的名字，文件的作用等。<br>|文件|内容|<br>|———|———|<br>|hello.i|预处理过的源程序|<br>|hello.s|汇编程序|<br>|hello.o|可重定位目标程序|<br>|hello|可执行程序|<br>|hello_o.elf|hello.o通过readelf查看的elf结构文本|<br>|hello.elf|hello通过readelf查看的elf结构文本|<br>|hello_o.asm|hello.o通过objdump查看的反汇编文本|<br>|hello.asm|hello通过objdump查看的反汇编文本|</p>
+<h2 id="中间结果"><a href="#中间结果" class="headerlink" title="中间结果"></a>中间结果</h2><p>列出你为编写本论文，生成的中间结果文件的名字，文件的作用等。<br>|:文件:|:内容:|<br>|———|———|<br>|hello.i|预处理过的源程序|<br>|hello.s|汇编程序|<br>|hello.o|可重定位目标程序|<br>|hello|可执行程序|<br>|hello_o.elf|hello.o通过readelf查看的elf结构文本|<br>|hello.elf|hello通过readelf查看的elf结构文本|<br>|hello_o.asm|hello.o通过objdump查看的反汇编文本|<br>|hello.asm|hello通过objdump查看的反汇编文本|</p>
 <h2 id="本章小结"><a href="#本章小结" class="headerlink" title="本章小结"></a>本章小结</h2><p>hello.c经过预处理、编译、汇编、链接四个阶段变成可执行文件hello，再通过shell执行可执行文件hello，然后再被回收，体现了程序从无到有的过程。</p>
 
       
@@ -900,24 +900,7 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(bp, s);
     })();
-  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  </script>
 
 
   
