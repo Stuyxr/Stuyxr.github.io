@@ -120,10 +120,12 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_12.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_13.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_14.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_15.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_16.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_17.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_15.png">
-<meta property="og:updated_time" content="2019-03-20T02:22:32.563Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_18.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_19.png">
+<meta property="og:updated_time" content="2019-03-27T12:05:52.077Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软件构造课堂笔记">
 <meta name="twitter:description" content="注：本文章按照哈工大老师讲的顺序编写，图片截取自王忠杰老师的PPT(同样也是MIT的PPT)，其中缺少第一章内容。 软件构造的过程、系统和工具软件构造的过程 编码 programming 重构 refactoring 调试 debugging 测试 testing 动态代码分析 代码评审 构建 build  buildValidate Compile Link Test Package Insta">
@@ -403,7 +405,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-20 10:22:32" itemprop="dateModified" datetime="2019-03-20T10:22:32+08:00">2019-03-20</time>
+                <time title="修改时间：2019-03-27 20:05:52" itemprop="dateModified" datetime="2019-03-27T20:05:52+08:00">2019-03-27</time>
               
             
           </span>
@@ -576,12 +578,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @param precondition</span><br><span class="line"> * @throws postcondition</span><br><span class="line"> * @return postcondition</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
 <p>对于mutable methods 或 parameters，除非在后置条件里声明过，否则方法内部不应该改变输入参数。</p>
 <p>尽量要用immutable，而不要有以下这样的Spec。</p>
+<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_15.png" alt=""></p>
 <p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_16.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_17.png" alt=""></p>
 <h3 id="Spec强弱"><a href="#Spec强弱" class="headerlink" title="Spec强弱"></a>Spec强弱</h3><p>$S1 \geq S2$：</p>
 <p>S2的前置条件s更弱，S1的后置条件更强。</p>
 <p>spec 变强：更放松的前置条件 +更严格的后置条件</p>
-<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_15.png" alt="1553047231391"></p>
+<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_17.png" alt=""></p>
 <p>但二者强弱无法比较。</p>
 <h2 id="抽象数据类型ADT"><a href="#抽象数据类型ADT" class="headerlink" title="抽象数据类型ADT"></a>抽象数据类型ADT</h2><h3 id="再谈mutable和immutable"><a href="#再谈mutable和immutable" class="headerlink" title="再谈mutable和immutable"></a>再谈mutable和immutable</h3><ul>
 <li>可变类型的对象：提供了可改变其内部数据的值的操作</li>
@@ -591,7 +593,7 @@
 <li><strong>创建者creator：</strong>创建一个该类型的新对象。一个创建者可能会接受一个对象作为参数，但是这个对象的类型不能是它创建对象对应的类型。</li>
 <li><strong>生产者producer：</strong>通过接受同类型的对象创建新的对象。例如， <code>String</code>类里面的 <code>concat</code> 方法就是一个生产者，它接受两个字符串然后据此产生一个新的字符串。</li>
 <li><strong>观察者observer：</strong>接受一个同类型的对象然后返回一个不同类型的对象/值。例如<code>List</code>的 <code>size</code>方法，它返回一个 <code>int</code>。</li>
-<li><strong>改造者mutator：</strong>改变对象的内容，例如 <code>List</code>的 <code>add</code> 方法，它会在列表中添加一个元素。</li>
+<li><strong>改造者mutator：</strong>改变对象的内容，例如 <code>List</code>的 <code>add</code> 方法，它会在列表中添加一个元素，<strong>只有mutable类有改造者。</strong></li>
 </ul>
 <p>构造者通常都是用构造函数实现的，例如 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html#ArrayList--" target="_blank" rel="noopener"><code>new ArrayList()</code></a> ，但是有的构造体是静态方法（类方法），例如 <a href="http://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#asList-T...-" target="_blank" rel="noopener"><code>Arrays.asList()</code></a>和 <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#valueOf-boolean-" target="_blank" rel="noopener"><code>String.valueOf()</code></a> ，这样的静态方法也称为<strong>工厂方法。</strong></p>
 <p>例子</p>
@@ -608,6 +610,44 @@
 <li><code>people</code> 应为 <code>private</code>。</li>
 <li><code>getMembers()</code>应该防御性拷贝。</li>
 </ol>
+<h3 id="如何测试ADT"><a href="#如何测试ADT" class="headerlink" title="如何测试ADT"></a>如何测试ADT</h3><ul>
+<li>测试creators, producers, and mutators：调用observers来观察这些operations的结果是否满足spec；</li>
+<li>测试observers：调用creators, producers, and mutators等方法产生或改变对象，来看结果是否正确。</li>
+</ul>
+<p>等价类划分</p>
+<h3 id="Rep-Invariant-and-Abstraction-Function"><a href="#Rep-Invariant-and-Abstraction-Function" class="headerlink" title="Rep Invariant and Abstraction Function"></a>Rep Invariant and Abstraction Function</h3><p>R：表示空间（for programmer）</p>
+<p>A：抽象空间（for user）</p>
+<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_18.png" alt=""></p>
+<p>RI : R to True if R to A; R to False if R not to A;</p>
+<p>表示不变性RI：某个具体的“表示”是否是“合法的”</p>
+<p>也可将RI看作：所有表示值的一个子集，包含了所有合法的表示值</p>
+<p>也可将RI看作：一个条件，描述了什么是“合法”的表示值   <strong>-&gt;经常这么写</strong></p>
+<p><strong>选择某种特定的表示方式R，进而指定某个子集是“合法”的(RI)，并为该子集中的每个值做出“解释”(AF)——即如何映射到抽象空间中的值。</strong></p>
+<p>RI : rep invariant</p>
+<p>AF: abstract function</p>
+<p>利用RI和AF设定规则，并写出<code>checkRep()</code>，来检查自己写的方法。</p>
+<p>表示泄露的安全声明：</p>
+<p>两种方法：</p>
+<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_19.png" alt=""></p>
+<p>Spec of Methods:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Rep invariant:</span></span><br><span class="line"><span class="comment">//    声明什么样的field是合法的，也就是R中什么样的变量会映射到A中</span></span><br><span class="line"><span class="comment">// Abstraction function:</span></span><br><span class="line"><span class="comment">//    AF(field1, field2, ...) = ... 声明R到A的映射方法</span></span><br><span class="line"><span class="comment">// Safety from rep exposure:</span></span><br><span class="line"><span class="comment">//    自证清白，你写的类为什么没有表示泄露</span></span><br></pre></td></tr></table></figure>
+<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><p>Interface</p>
+<p>Override 重写：</p>
+<p>super() 调用父类的方法</p>
+<p>抽象类</p>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><h4 id="特殊多态"><a href="#特殊多态" class="headerlink" title="特殊多态"></a>特殊多态</h4><p>function overloading</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OverloadExample</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">		System.out.println(add(<span class="string">"C"</span>,<span class="string">"D"</span>));</span><br><span class="line">		System.out.println(add(<span class="string">"C"</span>,<span class="string">"D"</span>,<span class="string">"E"</span>));</span><br><span class="line">		System.out.println(add(<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">add</span><span class="params">(String c, String d)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> c.concat(d);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">add</span><span class="params">(String c, String d, String e)</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> c.concat(d).concat(e);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> a+b;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>重载</p>
+<p>overload要有不同的参数列表</p>
+<p>父类和子类的overload</p>
+<blockquote>
+<p>Which overridden version of the method to call is decided at runtime based on object type, but which overloaded version of the method to call is based on the reference type of the argument passed at compile time.</p>
+<p>重写在运行阶段基于对象类型来决定执行哪个版本，但重载在编译阶段基于引用类型来执行哪个版本。</p>
+</blockquote>
+<p>Overriding  Object methods</p>
+<p><code>equals()</code> <code>hasCode()</code> <code>toString()</code></p>
+<p>参数化多态：generics 泛型</p>
+<p>子类型多态、包含多态：</p>
 
       
     </div>
@@ -655,6 +695,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/25/Google-Girl-Hackthon-Season-V-Beijing-游记/" rel="prev" title="Google Girl Hackathon Season V - Beijing 游记">
+                Google Girl Hackathon Season V - Beijing 游记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -730,7 +774,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -759,7 +803,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -835,7 +881,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件构造的过程、系统和工具"><span class="nav-number">1.</span> <span class="nav-text">软件构造的过程、系统和工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件构造的过程"><span class="nav-number">1.1.</span> <span class="nav-text">软件构造的过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">1.2.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态代评审"><span class="nav-number">1.3.</span> <span class="nav-text">静态代评审</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态代码分析"><span class="nav-number">1.4.</span> <span class="nav-text">动态代码分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#build-狭义软件构造"><span class="nav-number">1.5.</span> <span class="nav-text">build - 狭义软件构造</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试和测试优先的编程"><span class="nav-number">2.</span> <span class="nav-text">测试和测试优先的编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计顺序"><span class="nav-number">2.1.</span> <span class="nav-text">设计顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试分类"><span class="nav-number">2.2.</span> <span class="nav-text">测试分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#白盒测试和黑盒测试"><span class="nav-number">2.3.</span> <span class="nav-text">白盒测试和黑盒测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试覆盖"><span class="nav-number">2.4.</span> <span class="nav-text">测试覆盖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试策略"><span class="nav-number">2.5.</span> <span class="nav-text">测试策略</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型与类型检验"><span class="nav-number">3.</span> <span class="nav-text">数据类型与类型检验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型（左）和变量数据类型（右）"><span class="nav-number">3.1.</span> <span class="nav-text">基本数据类型（左）和变量数据类型（右）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态类型语言和动态类型语言"><span class="nav-number">3.2.</span> <span class="nav-text">静态类型语言和动态类型语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态类型检查和动态类型检查"><span class="nav-number">3.3.</span> <span class="nav-text">静态类型检查和动态类型检查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可变对象和不可变对象"><span class="nav-number">3.4.</span> <span class="nav-text">可变对象和不可变对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Snapshot-Diagram"><span class="nav-number">3.5.</span> <span class="nav-text">Snapshot Diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂数据类型Arrays-Collections"><span class="nav-number">3.6.</span> <span class="nav-text">复杂数据类型Arrays/Collections</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ADT设计规约"><span class="nav-number">4.</span> <span class="nav-text">ADT设计规约</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spec概述"><span class="nav-number">4.1.</span> <span class="nav-text">Spec概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行为等价性"><span class="nav-number">4.2.</span> <span class="nav-text">行为等价性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spec结构"><span class="nav-number">4.3.</span> <span class="nav-text">Spec结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spec强弱"><span class="nav-number">4.4.</span> <span class="nav-text">Spec强弱</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象数据类型ADT"><span class="nav-number">5.</span> <span class="nav-text">抽象数据类型ADT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#再谈mutable和immutable"><span class="nav-number">5.1.</span> <span class="nav-text">再谈mutable和immutable</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型和操作的分类"><span class="nav-number">6.</span> <span class="nav-text">类型和操作的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计抽象类型"><span class="nav-number">7.</span> <span class="nav-text">设计抽象类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表示独立"><span class="nav-number">7.1.</span> <span class="nav-text">表示独立</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表示泄露的例子"><span class="nav-number">7.2.</span> <span class="nav-text">表示泄露的例子</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#软件构造的过程、系统和工具"><span class="nav-number">1.</span> <span class="nav-text">软件构造的过程、系统和工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件构造的过程"><span class="nav-number">1.1.</span> <span class="nav-text">软件构造的过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编码"><span class="nav-number">1.2.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态代评审"><span class="nav-number">1.3.</span> <span class="nav-text">静态代评审</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态代码分析"><span class="nav-number">1.4.</span> <span class="nav-text">动态代码分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#build-狭义软件构造"><span class="nav-number">1.5.</span> <span class="nav-text">build - 狭义软件构造</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试和测试优先的编程"><span class="nav-number">2.</span> <span class="nav-text">测试和测试优先的编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计顺序"><span class="nav-number">2.1.</span> <span class="nav-text">设计顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试分类"><span class="nav-number">2.2.</span> <span class="nav-text">测试分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#白盒测试和黑盒测试"><span class="nav-number">2.3.</span> <span class="nav-text">白盒测试和黑盒测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试覆盖"><span class="nav-number">2.4.</span> <span class="nav-text">测试覆盖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试策略"><span class="nav-number">2.5.</span> <span class="nav-text">测试策略</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型与类型检验"><span class="nav-number">3.</span> <span class="nav-text">数据类型与类型检验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型（左）和变量数据类型（右）"><span class="nav-number">3.1.</span> <span class="nav-text">基本数据类型（左）和变量数据类型（右）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态类型语言和动态类型语言"><span class="nav-number">3.2.</span> <span class="nav-text">静态类型语言和动态类型语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态类型检查和动态类型检查"><span class="nav-number">3.3.</span> <span class="nav-text">静态类型检查和动态类型检查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可变对象和不可变对象"><span class="nav-number">3.4.</span> <span class="nav-text">可变对象和不可变对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Snapshot-Diagram"><span class="nav-number">3.5.</span> <span class="nav-text">Snapshot Diagram</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂数据类型Arrays-Collections"><span class="nav-number">3.6.</span> <span class="nav-text">复杂数据类型Arrays/Collections</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ADT设计规约"><span class="nav-number">4.</span> <span class="nav-text">ADT设计规约</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Spec概述"><span class="nav-number">4.1.</span> <span class="nav-text">Spec概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行为等价性"><span class="nav-number">4.2.</span> <span class="nav-text">行为等价性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spec结构"><span class="nav-number">4.3.</span> <span class="nav-text">Spec结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spec强弱"><span class="nav-number">4.4.</span> <span class="nav-text">Spec强弱</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象数据类型ADT"><span class="nav-number">5.</span> <span class="nav-text">抽象数据类型ADT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#再谈mutable和immutable"><span class="nav-number">5.1.</span> <span class="nav-text">再谈mutable和immutable</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型和操作的分类"><span class="nav-number">6.</span> <span class="nav-text">类型和操作的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计抽象类型"><span class="nav-number">7.</span> <span class="nav-text">设计抽象类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表示独立"><span class="nav-number">7.1.</span> <span class="nav-text">表示独立</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表示泄露的例子"><span class="nav-number">7.2.</span> <span class="nav-text">表示泄露的例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何测试ADT"><span class="nav-number">7.3.</span> <span class="nav-text">如何测试ADT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rep-Invariant-and-Abstraction-Function"><span class="nav-number">7.4.</span> <span class="nav-text">Rep Invariant and Abstraction Function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象编程"><span class="nav-number">8.</span> <span class="nav-text">面向对象编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-number">8.1.</span> <span class="nav-text">多态</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊多态"><span class="nav-number">8.1.1.</span> <span class="nav-text">特殊多态</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
