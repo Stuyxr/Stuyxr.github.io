@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Stuyxr&#39;s Blog">
 <meta property="og:description" content="Problem1: Poetic Walks内容简述在这个问题中，我们要设计一个ADT——Graph。它类似于Java开发者给我们提供的通用的容器，比如List，Map，Set。 如果不将具体表现暴露给用户，则我们称之为数据抽象。就像List的具体实现，我们并不知道，除非查Java文档。但是不管它怎么实现的，我们也并不在意，我们只需要在一List提供给我们的功能就可以了。 我们知道，List是一个">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-02T15:14:46.615Z">
+<meta property="og:updated_time" content="2019-04-02T15:24:25.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HITSC - LAB2">
 <meta name="twitter:description" content="Problem1: Poetic Walks内容简述在这个问题中，我们要设计一个ADT——Graph。它类似于Java开发者给我们提供的通用的容器，比如List，Map，Set。 如果不将具体表现暴露给用户，则我们称之为数据抽象。就像List的具体实现，我们并不知道，除非查Java文档。但是不管它怎么实现的，我们也并不在意，我们只需要在一List提供给我们的功能就可以了。 我们知道，List是一个">
@@ -368,7 +368,7 @@
                 
               
 
-              <time title="创建时间：2019-04-02 11:24:18 / 修改时间：23:14:46" itemprop="dateCreated datePublished" datetime="2019-04-02T11:24:18+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-02 11:24:18 / 修改时间：23:24:25" itemprop="dateCreated datePublished" datetime="2019-04-02T11:24:18+08:00">2019-04-02</time>
             
 
             
@@ -440,7 +440,7 @@
 <p>我们把测试数据根据不同类型的输入来分区，在这里就不讲分区了，可以参见<a href="https://stuyxr.com/2019/03/18/%E8%BD%AF%E4%BB%B6%E6%9E%84%E9%80%A0%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">软构课堂笔记</a>。</p>
 <p>每个测试前要加上测试策略的注释，说明你为什么这么分区，如：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * Testing strategy</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * Partition the inputs as follows:</span></span><br><span class="line"><span class="comment"> * graph has no vertices, graph has no edges, graph has both vertices and edges.</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * Include existed those three partition because</span></span><br><span class="line"><span class="comment"> * it returns specific string if there is not edges or vertices.</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-<h3 id="Part1-Implement-Graph"><a href="#Part1-Implement-Graph" class="headerlink" title="Part1 Implement Graph\"></a>Part1 Implement Graph\<string></string></h3><p>将泛型L考虑为String，并用两种不同的数据结构来实现。这一步很简单的，虽然你会有错觉这才是实验的主体。不过这真的只是最简单的一环。</p>
+<h3 id="Part1-Implement-Graph-lt-String-gt"><a href="#Part1-Implement-Graph-lt-String-gt" class="headerlink" title="Part1 Implement Graph&lt;String&gt;"></a>Part1 Implement <code>Graph&lt;String&gt;</code></h3><p>将泛型L考虑为String，并用两种不同的数据结构来实现。这一步很简单的，虽然你会有错觉这才是实验的主体。不过这真的只是最简单的一环。</p>
 <p>事实上，在实现之前我们要写Spec，不过由于接口中各个方法的Spec都已经写好了，所以这一步不需要我们去做。</p>
 <p>每个类都要写RI/AF/Safety from rep exposure，其具体的含义可以这么理解：</p>
 <p>RI是你定义的合法的field。</p>
@@ -448,7 +448,7 @@
 <p>Safety from rep exposure 是说明一下你这个class为什么没有表示暴露。</p>
 <p>像这样：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Rep invariant:</span></span><br><span class="line"><span class="comment">//   name and player are an non-empty Strings.</span></span><br><span class="line"><span class="comment">// Abstraction function:</span></span><br><span class="line"><span class="comment">//   AF(name, player) = a piece which belongs to a player named player</span></span><br><span class="line"><span class="comment">//      and the piece's name is name.</span></span><br><span class="line"><span class="comment">//      and column equals to size.</span></span><br><span class="line"><span class="comment">// Safety from rep exposure:</span></span><br><span class="line"><span class="comment">//   All fields are private.</span></span><br><span class="line"><span class="comment">//   All fields are immutable.</span></span><br></pre></td></tr></table></figure>
-<h3 id="Part2-Implement-generic-Graph"><a href="#Part2-Implement-generic-Graph" class="headerlink" title="Part2 Implement generic Graph\"></a>Part2 Implement generic Graph\<l></l></h3><p>将String换为泛型L，具体方法MIT的instruction里都写的很清楚了。</p>
+<h3 id="Part2-Implement-generic-Graph-lt-L-gt"><a href="#Part2-Implement-generic-Graph-lt-L-gt" class="headerlink" title="Part2 Implement generic Graph&lt;L&gt;"></a>Part2 Implement generic <code>Graph&lt;L&gt;</code></h3><p>将String换为泛型L，具体方法MIT的instruction里都写的很清楚了。</p>
 <h3 id="Part3-Poetic-walks"><a href="#Part3-Poetic-walks" class="headerlink" title="Part3 Poetic walks"></a>Part3 Poetic walks</h3><p>在这一步，是对我们写的ADT的简单的应用，注意依旧要遵循Spec$\rightarrow$Test$\rightarrow$coding的顺序来写。</p>
 <p>翻译一下题目描述吧。</p>
 <p>对于一个诗集，我们忽略大小写，将相邻的两个单词(包含标点)前一个向后一个连一条边，边权为1；如果已经有边了，那么边权+1,。然后我们个你一个简单的句子，让你扩充成一首诗。扩充原则是两个相邻的单词A B间加上C，W(A, C) + W(C, B)最大。如果不存在就不添加。</p>
@@ -694,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem1-Poetic-Walks"><span class="nav-number">1.</span> <span class="nav-text">Problem1: Poetic Walks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内容简述"><span class="nav-number">1.1.</span> <span class="nav-text">内容简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part0-Testing"><span class="nav-number">1.2.</span> <span class="nav-text">Part0 Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part1-Implement-Graph"><span class="nav-number">1.3.</span> <span class="nav-text">Part1 Implement Graph\</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part2-Implement-generic-Graph"><span class="nav-number">1.4.</span> <span class="nav-text">Part2 Implement generic Graph\</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part3-Poetic-walks"><span class="nav-number">1.5.</span> <span class="nav-text">Part3 Poetic walks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem2-Re-implement-the-Social-Network-in-Lab1"><span class="nav-number">2.</span> <span class="nav-text">Problem2: Re-implement the Social Network in Lab1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem3-Playing-Chess"><span class="nav-number">3.</span> <span class="nav-text">Problem3: Playing Chess</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem1-Poetic-Walks"><span class="nav-number">1.</span> <span class="nav-text">Problem1: Poetic Walks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内容简述"><span class="nav-number">1.1.</span> <span class="nav-text">内容简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part0-Testing"><span class="nav-number">1.2.</span> <span class="nav-text">Part0 Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part1-Implement-Graph-lt-String-gt"><span class="nav-number">1.3.</span> <span class="nav-text">Part1 Implement Graph&lt;String&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part2-Implement-generic-Graph-lt-L-gt"><span class="nav-number">1.4.</span> <span class="nav-text">Part2 Implement generic Graph&lt;L&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Part3-Poetic-walks"><span class="nav-number">1.5.</span> <span class="nav-text">Part3 Poetic walks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem2-Re-implement-the-Social-Network-in-Lab1"><span class="nav-number">2.</span> <span class="nav-text">Problem2: Re-implement the Social Network in Lab1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem3-Playing-Chess"><span class="nav-number">3.</span> <span class="nav-text">Problem3: Playing Chess</span></a></li></ol></div>
             
 
           </div>
