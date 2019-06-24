@@ -110,11 +110,11 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_14.png">
 <meta property="og:image" content="http://stuyxr.com/2019/06/24/软件构造总结/C:/Users/Stuyxr/AppData/Roaming/Typora/typora-user-images/1561364647015.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_20.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_25.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_26.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_25.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_26.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_22.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_21.png">
-<meta property="og:updated_time" content="2019-06-24T14:37:25.923Z">
+<meta property="og:updated_time" content="2019-06-24T14:42:03.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软件构造总结">
 <meta name="twitter:description" content="第一章 基础按照阶段划分  Build Time：构思算法、需求、设计、写代码，例如configuration，static link Run Time：运行时，程序被载入目标机器，开始执行，例如dynamic link  按动态性划分  moment：时间点，例如snapshot，memory dump period：时间段，例如log，stack trace  按构造对象划分  code：代码">
@@ -377,7 +377,7 @@
                 
               
 
-              <time title="创建时间：2019-06-24 11:24:18 / 修改时间：22:37:25" itemprop="dateCreated datePublished" datetime="2019-06-24T11:24:18+08:00">2019-06-24</time>
+              <time title="创建时间：2019-06-24 11:24:18 / 修改时间：22:42:03" itemprop="dateCreated datePublished" datetime="2019-06-24T11:24:18+08:00">2019-06-24</time>
             
 
             
@@ -563,7 +563,7 @@
 <p><code>List&lt;Number&gt;</code> is a subtype of <code>List&lt;? extends Object&gt;</code><br><code>List&lt;Object&gt;</code> is a subtype of <code>List&lt;? super String&gt;</code></p>
 <h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><ol>
 <li><p>visitor设计模式</p>
-<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_25.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_25.jpg" alt=""></p>
 <p><a href="https://blog.csdn.net/xu4661273/article/details/84274875" target="_blank" rel="noopener">看个例子</a></p>
 </li>
 <li><p>Iterator模式</p>
@@ -574,13 +574,14 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyIterator</span>&lt;<span class="title">E</span>&gt; <span class="keyword">implements</span> <span class="title">Iterator</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> Iterator&lt;Map.Entry&lt;Track, Set&lt;E&gt;&gt;&gt; iter;</span><br><span class="line">  <span class="keyword">private</span> Iterator&lt;E&gt; iter2;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">MyIterator</span><span class="params">(Map&lt;Track, Set&lt;E&gt;&gt; map)</span> </span>&#123;</span><br><span class="line">    iter = map.entrySet().iterator();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> iter.hasNext() || (iter2 != <span class="keyword">null</span> &amp;&amp; iter2.hasNext());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> E <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (iter2 != <span class="keyword">null</span> &amp;&amp; iter2.hasNext()) &#123;</span><br><span class="line">      <span class="keyword">return</span> iter2.next();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      iter2 = iter.next().getValue().iterator();</span><br><span class="line">      <span class="keyword">return</span> iter2.next();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Strategy模式</p>
-<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_26.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_26.jpg" alt=""></p>
 </li>
 </ol>
 <h1 id="第六章-可维护性"><a href="#第六章-可维护性" class="headerlink" title="第六章 可维护性"></a>第六章 可维护性</h1><p>正则表达式</p>
 <p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_22.png" alt=""></p>
 <p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/SC_21.png" alt=""></p>
-<h1 id="第七章-异常"><a href="#第七章-异常" class="headerlink" title="第七章 异常"></a>第七章 异常</h1>
+<h1 id="第七章-异常"><a href="#第七章-异常" class="headerlink" title="第七章 异常"></a>第七章 异常</h1><p>针对健壮性优化</p>
+
       
     </div>
 
