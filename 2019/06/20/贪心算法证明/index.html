@@ -98,24 +98,25 @@
 
 
 
-  <meta name="description" content="2017-2021 in HITCS2011-2017 in NEYCACMer&amp;amp;AFOIer">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Stuyxr&#39;s Blog">
-<meta property="og:url" content="http://stuyxr.com/about/index.html">
+  <meta name="description" content="贪心性质用贪心算法解决的题目需要满足以下性质：  最优子结构：一个问题的最优解包含其子问题的最优解。 贪心选择性：所求问题的整体最优解可以通过一系列局部最优的选择，即贪心选择来达到。  对比动态规划DP满足  最优子结构：一个问题的最优解包含其子问题的最优解。 重叠子问题：在问题的求解过程中，很多子问题的解将被多次使用。  贪心算法设计 设计贪心选择方法： 贪心选择方法 剩余子问题   证明：对于">
+<meta name="keywords" content="算法,贪心">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贪心算法证明">
+<meta property="og:url" content="http://stuyxr.com/2019/06/20/贪心算法证明/index.html">
 <meta property="og:site_name" content="Stuyxr&#39;s Blog">
-<meta property="og:description" content="2017-2021 in HITCS2011-2017 in NEYCACMer&amp;amp;AFOIer">
+<meta property="og:description" content="贪心性质用贪心算法解决的题目需要满足以下性质：  最优子结构：一个问题的最优解包含其子问题的最优解。 贪心选择性：所求问题的整体最优解可以通过一系列局部最优的选择，即贪心选择来达到。  对比动态规划DP满足  最优子结构：一个问题的最优解包含其子问题的最优解。 重叠子问题：在问题的求解过程中，很多子问题的解将被多次使用。  贪心算法设计 设计贪心选择方法： 贪心选择方法 剩余子问题   证明：对于">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-30T10:36:23.766Z">
+<meta property="og:updated_time" content="2019-06-20T13:16:51.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stuyxr&#39;s Blog">
-<meta name="twitter:description" content="2017-2021 in HITCS2011-2017 in NEYCACMer&amp;amp;AFOIer">
+<meta name="twitter:title" content="贪心算法证明">
+<meta name="twitter:description" content="贪心性质用贪心算法解决的题目需要满足以下性质：  最优子结构：一个问题的最优解包含其子问题的最优解。 贪心选择性：所求问题的整体最优解可以通过一系列局部最优的选择，即贪心选择来达到。  对比动态规划DP满足  最优子结构：一个问题的最优解包含其子问题的最优解。 重叠子问题：在问题的求解过程中，很多子问题的解将被多次使用。  贪心算法设计 设计贪心选择方法： 贪心选择方法 剩余子问题   证明：对于">
 
 
 
 
 
 
-  <link rel="canonical" href="http://stuyxr.com/about/">
+  <link rel="canonical" href="http://stuyxr.com/2019/06/20/贪心算法证明/">
 
 
 
@@ -125,7 +126,7 @@
   };
 </script>
 
-  <title> | Stuyxr's Blog</title>
+  <title>贪心算法证明 | Stuyxr's Blog</title>
   
 
 
@@ -228,7 +229,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -304,71 +305,218 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stuyxr.com/2019/06/20/贪心算法证明/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Stuyxr">
+      <meta itemprop="description" content="Life Recording.">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stuyxr's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>2017-2021 in HITCS<br>2011-2017 in NEYC<br>ACMer&amp;AFOIer</p>
+          <h1 class="post-title" itemprop="name headline">贪心算法证明
 
+              
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-20 20:20:04 / 修改时间：21:16:51" itemprop="dateCreated datePublished" datetime="2019-06-20T20:20:04+08:00">2019-06-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/06/20/贪心算法证明/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/06/20/贪心算法证明/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/06/20/贪心算法证明/" class="leancloud_visitors" data-flag-title="贪心算法证明">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="贪心性质"><a href="#贪心性质" class="headerlink" title="贪心性质"></a>贪心性质</h1><p>用贪心算法解决的题目需要满足以下性质：</p>
+<ul>
+<li>最优子结构：一个问题的最优解包含其子问题的最优解。</li>
+<li>贪心选择性：所求问题的整体最优解可以通过一系列<strong>局部最优</strong>的选择，即贪心选择来达到。</li>
+</ul>
+<h2 id="对比动态规划"><a href="#对比动态规划" class="headerlink" title="对比动态规划"></a>对比动态规划</h2><p>DP满足</p>
+<ul>
+<li>最优子结构：一个问题的最优解包含其子问题的最优解。</li>
+<li>重叠子问题：在问题的求解过程中，很多子问题的解将被多次使用。</li>
+</ul>
+<h1 id="贪心算法设计"><a href="#贪心算法设计" class="headerlink" title="贪心算法设计"></a>贪心算法设计</h1><ol>
+<li>设计贪心选择方法：<ul>
+<li>贪心选择方法</li>
+<li>剩余子问题</li>
+</ul>
+</li>
+<li>证明：对于 1 中贪心选择来说 所求解的问题具有<strong>最优子结构</strong></li>
+<li>证明：对于 1 中贪心选择算法来说 所求解的问题具有<strong>贪心选择性</strong><ul>
+<li>归纳法：证明在每一步做得都比其它算法好 从而最终产生了一个最优解</li>
+<li>交换论证法：在保证最优性不变前提下 从一个最优解逐步替换 最终得到贪心算法的解</li>
+</ul>
+</li>
+<li>按照 1 中设计的贪心选择方法设计算法</li>
+</ol>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+            <a href="/tags/贪心/" rel="tag"># 贪心</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/07/Java-多线程与并发编程/" rel="next" title="Java 多线程与并发编程">
+                <i class="fa fa-chevron-left"></i> Java 多线程与并发编程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/24/软件构造总结/" rel="prev" title="软件构造总结">
+                软件构造总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -402,8 +550,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -524,6 +681,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心性质"><span class="nav-number">1.</span> <span class="nav-text">贪心性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对比动态规划"><span class="nav-number">1.1.</span> <span class="nav-text">对比动态规划</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心算法设计"><span class="nav-number">2.</span> <span class="nav-text">贪心算法设计</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
