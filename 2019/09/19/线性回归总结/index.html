@@ -98,25 +98,25 @@
 
 
 
-  <meta name="description" content="$a^2+b^2=c^2$我Stuyxr又回来辽。大概在开学不久，双系统又GG了，重装的系统，东西全没了，包括以前写的东西。然后这一学期懒癌+ddl太多就一直没搞。直到昨天有人告诉我CSAPP的大作业「hello的一生」需要发布自媒体，今天搞一下。居然不一会就安完了，一定是因为电脑GG的次数太多了。只是可惜以前的文档不见了。给自己定几个死线：  hello的一生 Stuyxr的2018（提高一下作">
-<meta name="keywords" content="test">
+  <meta name="description" content="线性回归单变量回归训练集$(x, y)$，$x$自变量，$y$因变量 规定$m$是训练集大小，$(x^{(i)}, y^{(i)})$是第i个训练样本 hypothesis函数$h_\theta(x)=\theta_0+\theta_1x$，即拟合的曲线 cost function寻找参数$\theta_0 ,\theta_1$，使$J(\theta)=\frac{1}{2m}\sum_{i=1}">
+<meta name="keywords" content="机器学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TEST">
-<meta property="og:url" content="http://stuyxr.com/2018/12/30/TEST/index.html">
+<meta property="og:title" content="回归问题总结">
+<meta property="og:url" content="http://stuyxr.com/2019/09/19/线性回归总结/index.html">
 <meta property="og:site_name" content="Stuyxr&#39;s Blog">
-<meta property="og:description" content="$a^2+b^2=c^2$我Stuyxr又回来辽。大概在开学不久，双系统又GG了，重装的系统，东西全没了，包括以前写的东西。然后这一学期懒癌+ddl太多就一直没搞。直到昨天有人告诉我CSAPP的大作业「hello的一生」需要发布自媒体，今天搞一下。居然不一会就安完了，一定是因为电脑GG的次数太多了。只是可惜以前的文档不见了。给自己定几个死线：  hello的一生 Stuyxr的2018（提高一下作">
+<meta property="og:description" content="线性回归单变量回归训练集$(x, y)$，$x$自变量，$y$因变量 规定$m$是训练集大小，$(x^{(i)}, y^{(i)})$是第i个训练样本 hypothesis函数$h_\theta(x)=\theta_0+\theta_1x$，即拟合的曲线 cost function寻找参数$\theta_0 ,\theta_1$，使$J(\theta)=\frac{1}{2m}\sum_{i=1}">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-30T18:03:03.524Z">
+<meta property="og:updated_time" content="2019-09-19T16:10:59.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TEST">
-<meta name="twitter:description" content="$a^2+b^2=c^2$我Stuyxr又回来辽。大概在开学不久，双系统又GG了，重装的系统，东西全没了，包括以前写的东西。然后这一学期懒癌+ddl太多就一直没搞。直到昨天有人告诉我CSAPP的大作业「hello的一生」需要发布自媒体，今天搞一下。居然不一会就安完了，一定是因为电脑GG的次数太多了。只是可惜以前的文档不见了。给自己定几个死线：  hello的一生 Stuyxr的2018（提高一下作">
+<meta name="twitter:title" content="回归问题总结">
+<meta name="twitter:description" content="线性回归单变量回归训练集$(x, y)$，$x$自变量，$y$因变量 规定$m$是训练集大小，$(x^{(i)}, y^{(i)})$是第i个训练样本 hypothesis函数$h_\theta(x)=\theta_0+\theta_1x$，即拟合的曲线 cost function寻找参数$\theta_0 ,\theta_1$，使$J(\theta)=\frac{1}{2m}\sum_{i=1}">
 
 
 
 
 
 
-  <link rel="canonical" href="http://stuyxr.com/2018/12/30/TEST/">
+  <link rel="canonical" href="http://stuyxr.com/2019/09/19/线性回归总结/">
 
 
 
@@ -126,7 +126,7 @@
   };
 </script>
 
-  <title>TEST | Stuyxr's Blog</title>
+  <title>回归问题总结 | Stuyxr's Blog</title>
   
 
 
@@ -325,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://stuyxr.com/2018/12/30/TEST/">
+    <link itemprop="mainEntityOfPage" href="http://stuyxr.com/2019/09/19/线性回归总结/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Stuyxr">
@@ -342,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">TEST
+          <h1 class="post-title" itemprop="name headline">回归问题总结
 
               
             
@@ -368,7 +368,7 @@
                 
               
 
-              <time title="创建时间：2018-12-30 15:59:13" itemprop="dateCreated datePublished" datetime="2018-12-30T15:59:13+08:00">2018-12-30</time>
+              <time title="创建时间：2019-09-19 23:53:04" itemprop="dateCreated datePublished" datetime="2019-09-19T23:53:04+08:00">2019-09-19</time>
             
 
             
@@ -385,7 +385,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-31 02:03:03" itemprop="dateModified" datetime="2018-12-31T02:03:03+08:00">2018-12-31</time>
+                <time title="修改时间：2019-09-20 00:10:59" itemprop="dateModified" datetime="2019-09-20T00:10:59+08:00">2019-09-20</time>
               
             
           </span>
@@ -399,8 +399,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/30/TEST/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/30/TEST/" itemprop="commentCount"></span>
+                <a href="/2019/09/19/线性回归总结/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/09/19/线性回归总结/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -408,7 +408,7 @@
 
           
           
-             <span id="/2018/12/30/TEST/" class="leancloud_visitors" data-flag-title="TEST">
+             <span id="/2019/09/19/线性回归总结/" class="leancloud_visitors" data-flag-title="回归问题总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -439,15 +439,75 @@
       
 
       
-        <p>$a^2+b^2=c^2$<br>我Stuyxr又回来辽。<br>大概在开学不久，双系统又GG了，重装的系统，东西全没了，包括以前写的东西。<br>然后这一学期懒癌+ddl太多就一直没搞。<br>直到昨天有人告诉我CSAPP的大作业「hello的一生」需要发布自媒体，今天搞一下。<br>居然不一会就安完了，一定是因为电脑GG的次数太多了。<br>只是可惜以前的文档不见了。<br>给自己定几个死线：</p>
-<ul>
-<li>hello的一生</li>
-<li>Stuyxr的2018（提高一下作文水平</li>
-<li>总结一下CSAPP的几个实验（脑子清醒地学一下CSAPP</li>
-<li>python的scipy库的应用</li>
-<li>预习物理&amp;&amp;概率论</li>
-</ul>
-<p>（如果没有最后一条就好了。<br>无论如何，hello的一生，要开始了。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"hello world!"</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h1><h2 id="单变量回归"><a href="#单变量回归" class="headerlink" title="单变量回归"></a>单变量回归</h2><h3 id="训练集"><a href="#训练集" class="headerlink" title="训练集"></a>训练集</h3><p>$(x, y)$，$x$自变量，$y$因变量</p>
+<p>规定$m$是训练集大小，$(x^{(i)}, y^{(i)})$是第i个训练样本</p>
+<h3 id="hypothesis函数"><a href="#hypothesis函数" class="headerlink" title="hypothesis函数"></a>hypothesis函数</h3><p>$h_\theta(x)=\theta_0+\theta_1x$，即拟合的曲线</p>
+<h3 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h3><p>寻找参数$\theta_0 ,\theta_1$，使$J(\theta)=\frac{1}{2m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)}))^2$最小，这样的$\theta_0,\theta_1$就是我们选定hypothesis函数的$\theta_0,\theta_1$</p>
+<h2 id="多变量回归"><a href="#多变量回归" class="headerlink" title="多变量回归"></a>多变量回归</h2><h3 id="概念更新"><a href="#概念更新" class="headerlink" title="概念更新"></a>概念更新</h3><p>更新以上概念为：</p>
+<p>$n$是特征数目</p>
+<p>$x^{(i)}_j$是第i个训练样本的第j个特征</p>
+<p>为了方便我们定义$x^{(i)}_0=1​$</p>
+<h3 id="矩阵形式表示"><a href="#矩阵形式表示" class="headerlink" title="矩阵形式表示"></a>矩阵形式表示</h3><p>$x^{(i)}=\left( \begin{matrix} x^{(i)}_0\\ x^{(i)}_1\\ \vdots\\ x^{(i)}_n \end{matrix} \right)_{(n+1)\times 1}$</p>
+<p>参数向量$\theta=\left( \begin{matrix} \theta_0\\ \theta_1\\ \vdots\\ \theta_n \end{matrix} \right)_{(n+1)\times 1}$</p>
+<p>$X=\left( \begin{matrix} (x^{(1)})^{T}\\ (x^{(2)})^{T}\\ \vdots\\ (x^{(m)})^{T} \end{matrix} \right)_{m\times (n+1)}$</p>
+<h3 id="hypothesis函数-1"><a href="#hypothesis函数-1" class="headerlink" title="hypothesis函数"></a>hypothesis函数</h3><p>$h_\theta(x)=\theta^Tx$，其中$\theta,x$是列向量，定义如上</p>
+<p>$h_\theta(X)=X\theta$，且$h_\theta(X)\in \mathbb{R}^{n+1}$</p>
+<h3 id="cost-function-1"><a href="#cost-function-1" class="headerlink" title="cost function"></a>cost function</h3><p> $\begin{align}  J(\theta)&amp;=\frac{1}{2m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)}))^2 \\ &amp;= \frac{1}{2m}(h_\theta(X)-y)^T(h_\theta(X)-y)\\ &amp;=\frac{1}{2m}(X\theta-y)^T(X\theta-y)\end{align}$</p>
+<h1 id="多项式回归"><a href="#多项式回归" class="headerlink" title="多项式回归"></a>多项式回归</h1><p>$n$次多项式，将$x^1,x^2,\cdots,x^n$看作n个特征即可。</p>
+<h1 id="正则项"><a href="#正则项" class="headerlink" title="正则项"></a>正则项</h1><p>为了防止过拟合，我们可以将$J(\theta)$加入正则项，修改为$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)}))^2+\lambda\sum_{i=1}^{n}\theta_i^2\right]$。</p>
+<h1 id="Minimize-J-theta"><a href="#Minimize-J-theta" class="headerlink" title="Minimize $J(\theta)$"></a>Minimize $J(\theta)$</h1><h2 id="梯度下降法"><a href="#梯度下降法" class="headerlink" title="梯度下降法"></a>梯度下降法</h2><p>选择一个学习率$\alpha$，迭代次数$epcho$。每次沿梯度下降最快的方向，即导数方向下降，具体来讲：每次迭代可以表示为$\theta_j=\theta_j-\alpha\frac{\partial J(\theta)}{\theta_j}$。</p>
+<p>不难得出：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& repeat\ epcho\ times\ \{ \\
+& \ \ \ \ \ \ \theta_j = \theta_j-\frac{\alpha}{m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} \\
+& \} for\ j = 0\ \cdots \ n, simultaneous \ update
+\end{align}</script><p>用向量的形式表示：</p>
+<p>$\theta = \theta-\frac{\alpha}{m}X^T(X\theta-y)$</p>
+<p>如果有正则项的话，导数项会多一项，具体变为：</p>
+<script type="math/tex; mode=display">
+\begin{align}
+& repeat\ epcho\ times\ \{ \\
+& \ \ \ \ \ \ \theta_0 = \theta_0-\frac{\alpha}{m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_0^{(i)} \\
+& \ \ \ \ \ \ \theta_j = \theta_j(1-\frac{\alpha\lambda}{m})-\frac{\alpha}{m}\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})x_j^{(i)} \\
+& \} for\ j = 1\ \cdots \ n, simultaneous \ update
+\end{align}</script><p>用向量的形式表示：</p>
+<p>$\begin{equation}<br>tmp<br>=\left(\begin{matrix}<br>1  &amp;  0  &amp; \cdots\ &amp;0\\<br>0  &amp;  1-\frac{\alpha\lambda}{m}  &amp; \cdots\ &amp; 0\\<br> \vdots   &amp; \vdots &amp; \ddots  &amp; \vdots  \\<br> 0 &amp; 0  &amp; \cdots\ &amp; 1-\frac{\alpha\lambda}{m}\\<br>\end{matrix}\right)<br>\end{equation}_{(n+1)\times(n+1)}$</p>
+<p>$\theta = tmp\times\theta-\frac{\alpha}{m}X^T(X\theta-y)​$</p>
+<h2 id="正规方程法"><a href="#正规方程法" class="headerlink" title="正规方程法"></a>正规方程法</h2><p>实质是直接求最小二乘法中使得方程$\frac{\partial J(\theta)}{\theta_j}=0$的解。</p>
+<p>$\theta=(X^TX)^{-1}X^Ty$</p>
+<p>尽管$X^TX$可能不可逆，用matlab中的pinv或者python中的np.linalg.pinv可以求伪逆，依然可以得出正解。</p>
+<p>如果有正则项，那么</p>
+<p>$\begin{equation}<br>tmp<br>=\left(\begin{matrix}<br>0  &amp;  0  &amp; \cdots\ &amp;0\\<br>0  &amp;  1 &amp; \cdots\ &amp; 0\\<br> \vdots   &amp; \vdots &amp; \ddots  &amp; \vdots  \\<br> 0 &amp; 0  &amp; \cdots\ &amp; 1\\<br>\end{matrix}\right)<br>\end{equation}_{(n+1)\times(n+1)}$</p>
+<p>$\theta=(X^TX+\lambda tmp)^{-1}X^Ty​$</p>
+<p>事实上$X^TX+\lambda tmp$一定可逆。</p>
+<h2 id="共轭梯度法"><a href="#共轭梯度法" class="headerlink" title="共轭梯度法"></a>共轭梯度法</h2><p>共轭梯度法可以解决这一类问题：求$Ax=b$的解，其中$A$正定。</p>
+<p>设$f(x)=\frac{1}{2} x^{T} A x-b^{T} x$，$f’(x)=Ax-b$。所以最小化$f(x)$的问题等价于求$Ax=b$的解的问题。</p>
+<p>接着我们考虑cost function：</p>
+<p>$\begin{align}J(\theta)&amp;=\frac{1}{2m}(X\theta-y)^T(X\theta-y)\\ &amp;=\frac{1}{2m} (\theta^TX^T-y^T)(X\theta-y)\\ &amp;= \frac{1}{2m}(\theta^TX^TX\theta-2y^TX\theta+y^Ty)\end{align}$</p>
+<p>那么设$A=X^{T} X$，$b=X^Ty$，那么最小化$J(\theta)$的$\theta$就是$A\theta=b$的解。（注：$A$一定正定）</p>
+<p>至于真正的共轭梯度法，<a href="https://blog.csdn.net/weixin_37895339/article/details/84640137" target="_blank" rel="noopener">Click Here</a> and <a href="https://keson96.github.io/2016/11/27/2016-11-27-Conjugate-Gradient-Method/" target="_blank" rel="noopener">Click Here</a></p>
+<p>主要的思想是，梯度下降法每次沿着一个方向下降，并不会朝这个方向走到最低点走到底，这导致梯度下降法收敛很慢。共轭梯度法找出n个共轭正交向量，每次眼这n个方向走到底，使得剩余残差和之前的所有方向向量正交。理论上n次迭代之后就会找到最优解。</p>
+<p>但是事实上并不会真的找到最优解，接着迭代cost function还在下降，待填坑究其原因。</p>
+<p>伪代码：</p>
+<blockquote>
+<p>$A=X^{T} X$, $b=X^Ty$</p>
+<p>$\theta_0 = $ any</p>
+<p>$r0 := b−A\theta_0$ ($r_i$为第i次迭代的误差)</p>
+<p>$d0:=r0$ ($d_i$是我们要求的共轭向量，在python实现时别忘copy)</p>
+<p>$k:=0 $ (k表示第几次迭代)</p>
+<p>repeat</p>
+<p>​    $\alpha_{k} :=\frac{r_{k}^{T} r_{k}}{d_{k}^{T} A d_{k}}$ (该项为学习率，是求出来的)</p>
+<p>​    $x_{k+1} :=x_{k}+\alpha_{k} d_{k}$</p>
+<p>​    $r_{k+1} :=r_{k}-\alpha_{k} Q d_{k}$</p>
+<p>​    如果$r_{k+1}$足够小，则提前退出循环 （也就是认为已经找到最优解了）</p>
+<p>​    $\beta_{k} :=\frac{r_{k+1}^{T} r_{k+1}}{r_{k}^{T} r_{k}}$<br>​    $d_{k+1} :=r_{k+1}+\beta_{k} d_{k}$ （Gram-Schmidt过程求$d_k$）</p>
+<p>​    $k:=k+1$</p>
+<p>end repeat</p>
+<p>The result is $x_{k+1}$</p>
+</blockquote>
+<p>python：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">conjugate_gradient</span><span class="params">(x_train, y_train, epochs=<span class="number">10000</span>, eps=<span class="number">1e-6</span>)</span>:</span></span><br><span class="line">    feature_number, data_number = x_train.shape</span><br><span class="line">    theta = (np.zeros(data_number)).reshape(data_number, <span class="number">1</span>)</span><br><span class="line">    a = np.dot(x_train.T, x_train)</span><br><span class="line">    b = np.dot(x_train.T, y_train)</span><br><span class="line">    r0 = b - np.dot(a, theta)</span><br><span class="line">    d0 = np.copy(r0)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(epochs):</span><br><span class="line">        alpha = np.sum(np.dot(r0.T, r0) / np.dot(np.dot(d0.T, a), d0))</span><br><span class="line">        theta = theta + alpha * d0</span><br><span class="line">        r1 = r0 - alpha * np.dot(a, d0)</span><br><span class="line">        beta = np.sum(np.dot(r1.T, r1) / np.dot(r0.T, r0))</span><br><span class="line">        <span class="keyword">if</span> np.dot(r1.T, r1) &lt; eps:</span><br><span class="line">            <span class="keyword">return</span> theta, i + <span class="number">1</span></span><br><span class="line">        d1 = r1 + beta * d0</span><br><span class="line">        d0 = np.copy(d1)</span><br><span class="line">        r0 = np.copy(r1)</span><br><span class="line">        <span class="comment"># print(cost_function(theta, x_train, y_train))</span></span><br><span class="line">    <span class="keyword">return</span> theta, epochs</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -471,7 +531,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/test/" rel="tag"># test</a>
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
           
         </div>
       
@@ -484,15 +544,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/06/24/软件构造总结/" rel="next" title="软件构造总结">
+                <i class="fa fa-chevron-left"></i> 软件构造总结
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/01/Goodbye-2018/" rel="prev" title="Goodbye 2018">
-                Goodbye 2018 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -541,8 +601,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -665,6 +734,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性回归"><span class="nav-number">1.</span> <span class="nav-text">线性回归</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单变量回归"><span class="nav-number">1.1.</span> <span class="nav-text">单变量回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#训练集"><span class="nav-number">1.1.1.</span> <span class="nav-text">训练集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hypothesis函数"><span class="nav-number">1.1.2.</span> <span class="nav-text">hypothesis函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cost-function"><span class="nav-number">1.1.3.</span> <span class="nav-text">cost function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多变量回归"><span class="nav-number">1.2.</span> <span class="nav-text">多变量回归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念更新"><span class="nav-number">1.2.1.</span> <span class="nav-text">概念更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#矩阵形式表示"><span class="nav-number">1.2.2.</span> <span class="nav-text">矩阵形式表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hypothesis函数-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">hypothesis函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cost-function-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">cost function</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多项式回归"><span class="nav-number">2.</span> <span class="nav-text">多项式回归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正则项"><span class="nav-number">3.</span> <span class="nav-text">正则项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Minimize-J-theta"><span class="nav-number">4.</span> <span class="nav-text">Minimize $J(\theta)$</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降法"><span class="nav-number">4.1.</span> <span class="nav-text">梯度下降法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正规方程法"><span class="nav-number">4.2.</span> <span class="nav-text">正规方程法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#共轭梯度法"><span class="nav-number">4.3.</span> <span class="nav-text">共轭梯度法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

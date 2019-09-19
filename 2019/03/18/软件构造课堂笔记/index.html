@@ -152,7 +152,7 @@
 <meta property="og:image" content="http://stuyxr.com/2019/03/18/软件构造课堂笔记/C:/Users/Stuyxr/AppData/Roaming/Typora/typora-user-images/1557880073764.png">
 <meta property="og:image" content="http://stuyxr.com/2019/03/18/软件构造课堂笔记/C:/Users/Stuyxr/AppData/Roaming/Typora/typora-user-images/1557880170862.png">
 <meta property="og:image" content="http://stuyxr.com/2019/03/18/软件构造课堂笔记/C:/Users/Stuyxr/AppData/Roaming/Typora/typora-user-images/1557880398612.png">
-<meta property="og:updated_time" content="2019-05-31T23:20:15.966Z">
+<meta property="og:updated_time" content="2019-06-24T18:22:57.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软件构造课堂笔记">
 <meta name="twitter:description" content="注：本文章按照哈工大老师讲的顺序编写，图片截取自王忠杰老师的PPT(同样也是MIT的PPT)，其中缺少第一章内容。 软件构造的过程、系统和工具软件构造的过程 编码 programming 重构 refactoring 调试 debugging 测试 testing 动态代码分析 代码评审 构建 build  buildValidate Compile Link Test Package Insta">
@@ -432,7 +432,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-01 07:20:15" itemprop="dateModified" datetime="2019-06-01T07:20:15+08:00">2019-06-01</time>
+                <time title="修改时间：2019-06-25 02:22:57" itemprop="dateModified" datetime="2019-06-25T02:22:57+08:00">2019-06-25</time>
               
             
           </span>
@@ -810,7 +810,13 @@
 <p>用于支持native方法的执行，存储了每个native方法的执行状态。本地方法栈和虚拟机栈他们的运行机制一致，唯一的区别是，虚拟机栈执行Java方法，本地方法栈执行native方法。在很多虚拟机中（如Sun的JDK默认的HotSpot虚拟机），会将虚拟机栈和本地方法栈一起使用。</p>
 <p><img src="/2019/03/18/软件构造课堂笔记/C:/Users\Stuyxr\AppData\Roaming\Typora\typora-user-images\1557711102277.png" alt="1557711102277"></p>
 <p><img src="/2019/03/18/软件构造课堂笔记/C:/Users\Stuyxr\AppData\Roaming\Typora\typora-user-images\1557711126749.png" alt="1557711126749"></p>
-<h3 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h3><h4 id="传统垃圾回收算法"><a href="#传统垃圾回收算法" class="headerlink" title="传统垃圾回收算法"></a>传统垃圾回收算法</h4><h4 id="分“代”回收的GC算法"><a href="#分“代”回收的GC算法" class="headerlink" title="分“代”回收的GC算法"></a>分“代”回收的GC算法</h4><p>按照存活周期来分配他在堆上的位置</p>
+<h3 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h3><h4 id="传统垃圾回收算法"><a href="#传统垃圾回收算法" class="headerlink" title="传统垃圾回收算法"></a>传统垃圾回收算法</h4><ul>
+<li>引用计数</li>
+<li>标记-整理</li>
+<li>标记-清除</li>
+<li>复制</li>
+</ul>
+<h4 id="分“代”回收的GC算法"><a href="#分“代”回收的GC算法" class="headerlink" title="分“代”回收的GC算法"></a>分“代”回收的GC算法</h4><p>按照存活周期来分配他在堆上的位置</p>
 <p>存活周期短的在Young，长的在Old</p>
 <p><img src="/2019/03/18/软件构造课堂笔记/C:/Users\Stuyxr\AppData\Roaming\Typora\typora-user-images\1557880073764.png" alt="1557880073764"></p>
 <ol>
@@ -959,7 +965,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -998,7 +1004,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
