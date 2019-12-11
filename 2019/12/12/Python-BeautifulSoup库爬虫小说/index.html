@@ -98,25 +98,27 @@
 
 
 
-  <meta name="description" content="贪心性质用贪心算法解决的题目需要满足以下性质：  最优子结构：一个问题的最优解包含其子问题的最优解。 贪心选择性：所求问题的整体最优解可以通过一系列局部最优的选择，即贪心选择来达到。  对比动态规划DP满足  最优子结构：一个问题的最优解包含其子问题的最优解。 重叠子问题：在问题的求解过程中，很多子问题的解将被多次使用。  贪心算法设计 设计贪心选择方法： 贪心选择方法 剩余子问题   证明：对于">
-<meta name="keywords" content="算法,贪心">
+  <meta name="description" content="最近看的小说（盗版网站）广告太多了，又想白嫖，于是写了个爬虫emmm（好吧是不想写实验来着 这份代码基于盗版小说网站https://www.26ksw.com/，但是盗版网站都差不都这样吧。。。 然后发现这个网站的这本书缺了两章似乎emmm 原理很简单，只不过bs4不太熟悉搞了好久。。 观察审查元素中Elements结构随便搞一搞。。  123456789101112131415161718192">
+<meta name="keywords" content="python,爬虫">
 <meta property="og:type" content="article">
-<meta property="og:title" content="贪心算法证明">
-<meta property="og:url" content="http://stuyxr.com/2019/06/20/贪心算法证明/index.html">
+<meta property="og:title" content="Python BeautifulSoup库爬虫小说">
+<meta property="og:url" content="http://stuyxr.com/2019/12/12/Python-BeautifulSoup库爬虫小说/index.html">
 <meta property="og:site_name" content="Stuyxr&#39;s Blog">
-<meta property="og:description" content="贪心性质用贪心算法解决的题目需要满足以下性质：  最优子结构：一个问题的最优解包含其子问题的最优解。 贪心选择性：所求问题的整体最优解可以通过一系列局部最优的选择，即贪心选择来达到。  对比动态规划DP满足  最优子结构：一个问题的最优解包含其子问题的最优解。 重叠子问题：在问题的求解过程中，很多子问题的解将被多次使用。  贪心算法设计 设计贪心选择方法： 贪心选择方法 剩余子问题   证明：对于">
+<meta property="og:description" content="最近看的小说（盗版网站）广告太多了，又想白嫖，于是写了个爬虫emmm（好吧是不想写实验来着 这份代码基于盗版小说网站https://www.26ksw.com/，但是盗版网站都差不都这样吧。。。 然后发现这个网站的这本书缺了两章似乎emmm 原理很简单，只不过bs4不太熟悉搞了好久。。 观察审查元素中Elements结构随便搞一搞。。  123456789101112131415161718192">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-19T16:06:57.675Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/BS4_1.png">
+<meta property="og:updated_time" content="2019-12-11T17:29:43.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="贪心算法证明">
-<meta name="twitter:description" content="贪心性质用贪心算法解决的题目需要满足以下性质：  最优子结构：一个问题的最优解包含其子问题的最优解。 贪心选择性：所求问题的整体最优解可以通过一系列局部最优的选择，即贪心选择来达到。  对比动态规划DP满足  最优子结构：一个问题的最优解包含其子问题的最优解。 重叠子问题：在问题的求解过程中，很多子问题的解将被多次使用。  贪心算法设计 设计贪心选择方法： 贪心选择方法 剩余子问题   证明：对于">
+<meta name="twitter:title" content="Python BeautifulSoup库爬虫小说">
+<meta name="twitter:description" content="最近看的小说（盗版网站）广告太多了，又想白嫖，于是写了个爬虫emmm（好吧是不想写实验来着 这份代码基于盗版小说网站https://www.26ksw.com/，但是盗版网站都差不都这样吧。。。 然后发现这个网站的这本书缺了两章似乎emmm 原理很简单，只不过bs4不太熟悉搞了好久。。 观察审查元素中Elements结构随便搞一搞。。  123456789101112131415161718192">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/BS4_1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://stuyxr.com/2019/06/20/贪心算法证明/">
+  <link rel="canonical" href="http://stuyxr.com/2019/12/12/Python-BeautifulSoup库爬虫小说/">
 
 
 
@@ -126,7 +128,7 @@
   };
 </script>
 
-  <title>贪心算法证明 | Stuyxr's Blog</title>
+  <title>Python BeautifulSoup库爬虫小说 | Stuyxr's Blog</title>
   
 
 
@@ -325,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://stuyxr.com/2019/06/20/贪心算法证明/">
+    <link itemprop="mainEntityOfPage" href="http://stuyxr.com/2019/12/12/Python-BeautifulSoup库爬虫小说/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Stuyxr">
@@ -342,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">贪心算法证明
+          <h1 class="post-title" itemprop="name headline">Python BeautifulSoup库爬虫小说
 
               
             
@@ -368,24 +370,12 @@
                 
               
 
-              <time title="创建时间：2019-06-20 20:20:04" itemprop="dateCreated datePublished" datetime="2019-06-20T20:20:04+08:00">2019-06-20</time>
+              <time title="创建时间：2019-12-12 01:17:24 / 修改时间：01:29:43" itemprop="dateCreated datePublished" datetime="2019-12-12T01:17:24+08:00">2019-12-12</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-09-20 00:06:57" itemprop="dateModified" datetime="2019-09-20T00:06:57+08:00">2019-09-20</time>
               
             
           </span>
@@ -399,8 +389,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/06/20/贪心算法证明/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/06/20/贪心算法证明/" itemprop="commentCount"></span>
+                <a href="/2019/12/12/Python-BeautifulSoup库爬虫小说/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/12/12/Python-BeautifulSoup库爬虫小说/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -408,7 +398,7 @@
 
           
           
-             <span id="/2019/06/20/贪心算法证明/" class="leancloud_visitors" data-flag-title="贪心算法证明">
+             <span id="/2019/12/12/Python-BeautifulSoup库爬虫小说/" class="leancloud_visitors" data-flag-title="Python BeautifulSoup库爬虫小说">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -439,30 +429,13 @@
       
 
       
-        <h1 id="贪心性质"><a href="#贪心性质" class="headerlink" title="贪心性质"></a>贪心性质</h1><p>用贪心算法解决的题目需要满足以下性质：</p>
-<ul>
-<li>最优子结构：一个问题的最优解包含其子问题的最优解。</li>
-<li>贪心选择性：所求问题的整体最优解可以通过一系列<strong>局部最优</strong>的选择，即贪心选择来达到。</li>
-</ul>
-<h2 id="对比动态规划"><a href="#对比动态规划" class="headerlink" title="对比动态规划"></a>对比动态规划</h2><p>DP满足</p>
-<ul>
-<li>最优子结构：一个问题的最优解包含其子问题的最优解。</li>
-<li>重叠子问题：在问题的求解过程中，很多子问题的解将被多次使用。</li>
-</ul>
-<h1 id="贪心算法设计"><a href="#贪心算法设计" class="headerlink" title="贪心算法设计"></a>贪心算法设计</h1><ol>
-<li>设计贪心选择方法：<ul>
-<li>贪心选择方法</li>
-<li>剩余子问题</li>
-</ul>
-</li>
-<li>证明：对于 1 中贪心选择来说 所求解的问题具有<strong>最优子结构</strong></li>
-<li>证明：对于 1 中贪心选择算法来说 所求解的问题具有<strong>贪心选择性</strong><ul>
-<li>归纳法：证明在每一步做得都比其它算法好 从而最终产生了一个最优解</li>
-<li>交换论证法：在保证最优性不变前提下 从一个最优解逐步替换 最终得到贪心算法的解</li>
-</ul>
-</li>
-<li>按照 1 中设计的贪心选择方法设计算法</li>
-</ol>
+        <p>最近看的小说（盗版网站）广告太多了，又想白嫖，于是写了个爬虫emmm（好吧是不想写实验来着</p>
+<p>这份代码基于盗版小说网站<a href="https://www.26ksw.com/" target="_blank" rel="noopener">https://www.26ksw.com/</a>，但是盗版网站都差不都这样吧。。。</p>
+<p>然后发现这个网站的这本书缺了两章似乎emmm</p>
+<p>原理很简单，只不过bs4不太熟悉搞了好久。。</p>
+<p>观察审查元素中Elements结构随便搞一搞。。</p>
+<p><img src="https://raw.githubusercontent.com/Stuyxr/ImageBed/master/BS4_1.png" alt=""></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> bs4</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">req_header = &#123;</span><br><span class="line">    <span class="string">'Accept'</span>: <span class="string">'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,'</span></span><br><span class="line">              <span class="string">'application/signed-exchange;v=b3 '</span>,</span><br><span class="line">    <span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</span><br><span class="line">    <span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.9,en;q=0.8'</span>,</span><br><span class="line">    <span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>,</span><br><span class="line">    <span class="string">'Cookie'</span>: <span class="string">'PHPSESSID=hmgtb7vir38sc6p80vtc644c44; bookid=84288; bgcolor=; font=; size=; fontcolor=; width=; '</span></span><br><span class="line">              <span class="string">'chapterid=37162336; chaptername=chapter17'</span>,</span><br><span class="line">    <span class="string">'Host'</span>: <span class="string">'www.26ksw.com'</span>,</span><br><span class="line">    <span class="string">'Sec-Fetch-Mode'</span>: <span class="string">'navigate'</span>,</span><br><span class="line">    <span class="string">'Sec-Fetch-Site'</span>: <span class="string">'same-origin'</span>,</span><br><span class="line">    <span class="string">'Sec-Fetch-User'</span>: <span class="string">'?1'</span>,</span><br><span class="line">    <span class="string">'Upgrade-Insecure-Requests'</span>: <span class="string">'1'</span>,</span><br><span class="line">    <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '</span></span><br><span class="line">                  <span class="string">'Chrome/78.0.3904.108 Safari/537.36'</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">title = []</span><br><span class="line">urls = []</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_html</span><span class="params">(url)</span>:</span></span><br><span class="line">    r = requests.get(url, params=req_header)</span><br><span class="line">    soup = BeautifulSoup(r.text, <span class="string">'html.parser'</span>)</span><br><span class="line">    <span class="keyword">return</span> soup</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_catalog</span><span class="params">(url)</span>:</span></span><br><span class="line">    soup = get_html(url)</span><br><span class="line">    title_list = soup.select(<span class="string">'#wrapper #main .box_con #list'</span>)</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> title_list[<span class="number">0</span>].find_all(<span class="string">'a'</span>):</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> i &lt;= <span class="number">12</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        title.append(item.string)</span><br><span class="line">        urls.append(item.attrs[<span class="string">'href'</span>])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_content</span><span class="params">(id, url)</span>:</span></span><br><span class="line">    soup = get_html(url)</span><br><span class="line">    content = soup.select(<span class="string">'#wrapper #main .content_read #content'</span>)[<span class="number">0</span>].contents</span><br><span class="line">    ret = <span class="string">'chapter'</span> + str(id) + <span class="string">'\r\n'</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> content:</span><br><span class="line">        <span class="keyword">if</span> isinstance(item, bs4.element.NavigableString):</span><br><span class="line">            ret += item + <span class="string">'\r\n'</span></span><br><span class="line">    <span class="keyword">return</span> ret</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main_url = <span class="string">'https://www.26ksw.com/book/84288/'</span></span><br><span class="line">    get_catalog(main_url)</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'book.txt'</span>, <span class="string">'a'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">59</span>):</span><br><span class="line">            print(i + <span class="number">1</span>)</span><br><span class="line">            url = <span class="string">'https://www.26ksw.com'</span> + urls[i]</span><br><span class="line">            f.write(get_content(i+<span class="number">1</span>, url))</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -486,9 +459,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法/" rel="tag"># 算法</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/贪心/" rel="tag"># 贪心</a>
+            <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
           
         </div>
       
@@ -501,8 +474,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/07/Java-多线程与并发编程/" rel="next" title="Java 多线程与并发编程">
-                <i class="fa fa-chevron-left"></i> Java 多线程与并发编程
+              <a href="/2019/09/19/线性回归总结/" rel="next" title="回归问题总结">
+                <i class="fa fa-chevron-left"></i> 回归问题总结
               </a>
             
           </div>
@@ -510,10 +483,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/24/软件构造总结/" rel="prev" title="软件构造总结">
-                软件构造总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -562,17 +531,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -699,23 +659,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心性质"><span class="nav-number">1.</span> <span class="nav-text">贪心性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#对比动态规划"><span class="nav-number">1.1.</span> <span class="nav-text">对比动态规划</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心算法设计"><span class="nav-number">2.</span> <span class="nav-text">贪心算法设计</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
