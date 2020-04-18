@@ -98,24 +98,29 @@
 
 
 
-  <meta name="description" content="Life Recording.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://stuyxr.com/tags/index.html">
+  <meta name="description" content="MLPCNNCNN StructureMini-Batch写在这里但并不只适用于CNN。 梯度下降的优化——批量梯度下降，把数据分为若干个批，每次只用一批来更新参数。 优点：  计算量小 收敛性能不太好，可能在最优点附近晃来晃去，hit不到最优点，而每次用一批来更新下降起来就不容易跑偏，减少了随机性  BatchNorm写在这里但并不只适用于CNN。 缓解深度神经网络梯度消失的问题。 Intern">
+<meta name="keywords" content="深度学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度学习初探">
+<meta property="og:url" content="http://stuyxr.com/2020/03/19/深度学习初探/index.html">
 <meta property="og:site_name" content="Stuyxr&#39;s Blog">
-<meta property="og:description" content="Life Recording.">
+<meta property="og:description" content="MLPCNNCNN StructureMini-Batch写在这里但并不只适用于CNN。 梯度下降的优化——批量梯度下降，把数据分为若干个批，每次只用一批来更新参数。 优点：  计算量小 收敛性能不太好，可能在最优点附近晃来晃去，hit不到最优点，而每次用一批来更新下降起来就不容易跑偏，减少了随机性  BatchNorm写在这里但并不只适用于CNN。 缓解深度神经网络梯度消失的问题。 Intern">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-30T10:31:25.977Z">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-084e9875d10896369e09af5a60e56250_720w.jpg">
+<meta property="og:image" content="http://stuyxr.com/2020/03/19/深度学习初探/C:/Users/Stuyxr/AppData/Roaming/Typora/typora-user-images/1584624527032.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-c37bda8f138402cc7c3dd62c509d36f6_720w.jpg">
+<meta property="og:updated_time" content="2020-03-19T15:27:51.599Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Life Recording.">
+<meta name="twitter:title" content="深度学习初探">
+<meta name="twitter:description" content="MLPCNNCNN StructureMini-Batch写在这里但并不只适用于CNN。 梯度下降的优化——批量梯度下降，把数据分为若干个批，每次只用一批来更新参数。 优点：  计算量小 收敛性能不太好，可能在最优点附近晃来晃去，hit不到最优点，而每次用一批来更新下降起来就不容易跑偏，减少了随机性  BatchNorm写在这里但并不只适用于CNN。 缓解深度神经网络梯度消失的问题。 Intern">
+<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-084e9875d10896369e09af5a60e56250_720w.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="http://stuyxr.com/tags/">
+  <link rel="canonical" href="http://stuyxr.com/2020/03/19/深度学习初探/">
 
 
 
@@ -125,7 +130,7 @@
   };
 </script>
 
-  <title>tags | Stuyxr's Blog</title>
+  <title>深度学习初探 | Stuyxr's Blog</title>
   
 
 
@@ -245,7 +250,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -304,143 +309,235 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://stuyxr.com/2020/03/19/深度学习初探/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Stuyxr">
+      <meta itemprop="description" content="Life Recording.">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Stuyxr's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
+          <h1 class="post-title" itemprop="name headline">深度学习初探
+
               
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-              目前共计 16 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/CSAPP/" style="font-size: 12px; color: #ccc">CSAPP</a> <a href="/tags/Java/" style="font-size: 12px; color: #ccc">Java</a> <a href="/tags/Software-Construction/" style="font-size: 12px; color: #ccc">Software Construction</a> <a href="/tags/algorithms/" style="font-size: 12px; color: #ccc">algorithms</a> <a href="/tags/java/" style="font-size: 30px; color: #111">java</a> <a href="/tags/python/" style="font-size: 12px; color: #ccc">python</a> <a href="/tags/test/" style="font-size: 12px; color: #ccc">test</a> <a href="/tags/总结/" style="font-size: 12px; color: #ccc">总结</a> <a href="/tags/机器学习/" style="font-size: 12px; color: #ccc">机器学习</a> <a href="/tags/深度学习/" style="font-size: 30px; color: #111">深度学习</a> <a href="/tags/游记/" style="font-size: 12px; color: #ccc">游记</a> <a href="/tags/爬虫/" style="font-size: 12px; color: #ccc">爬虫</a> <a href="/tags/笔记/" style="font-size: 30px; color: #111">笔记</a> <a href="/tags/算法/" style="font-size: 12px; color: #ccc">算法</a> <a href="/tags/贪心/" style="font-size: 12px; color: #ccc">贪心</a> <a href="/tags/软件构造/" style="font-size: 30px; color: #111">软件构造</a>
-            </div>
-          </div>
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-19 23:53:04 / 修改时间：23:27:51" itemprop="dateCreated datePublished" datetime="2020-03-19T23:53:04+08:00">2020-03-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/03/19/深度学习初探/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2020/03/19/深度学习初探/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/03/19/深度学习初探/" class="leancloud_visitors" data-flag-title="深度学习初探">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="MLP"><a href="#MLP" class="headerlink" title="MLP"></a>MLP</h1><h1 id="CNN"><a href="#CNN" class="headerlink" title="CNN"></a>CNN</h1><h2 id="CNN-Structure"><a href="#CNN-Structure" class="headerlink" title="CNN Structure"></a>CNN Structure</h2><h2 id="Mini-Batch"><a href="#Mini-Batch" class="headerlink" title="Mini-Batch"></a>Mini-Batch</h2><p>写在这里但并不只适用于CNN。</p>
+<p>梯度下降的优化——批量梯度下降，把数据分为若干个批，每次只用一批来更新参数。</p>
+<p>优点：</p>
+<ol>
+<li>计算量小</li>
+<li>收敛性能不太好，可能在最优点附近晃来晃去，hit不到最优点，而每次用一批来更新下降起来就不容易跑偏，减少了随机性</li>
+</ol>
+<h2 id="BatchNorm"><a href="#BatchNorm" class="headerlink" title="BatchNorm"></a>BatchNorm</h2><p>写在这里但并不只适用于CNN。</p>
+<p>缓解深度神经网络梯度消失的问题。</p>
+<h3 id="Internal-Covariate-Shift"><a href="#Internal-Covariate-Shift" class="headerlink" title="Internal Covariate Shift"></a>Internal Covariate Shift</h3><p>在深层网络训练的过程中，由于网络中参数变化而引起内部结点数据分布发生变化的这一过程叫做Internal Covariate Shift。</p>
+<p>Internal Covariate Shift带来的问题：</p>
+<ol>
+<li>上层网络需要不停调整来适应输入数据分布的变化，导致网络学习速度的降低</li>
+<li>网络的训练过程容易陷入梯度饱和区，减缓网络收敛速度（梯度消失or爆炸，想想sigmoid）</li>
+</ol>
+<h3 id="BatchNorm原理"><a href="#BatchNorm原理" class="headerlink" title="BatchNorm原理"></a>BatchNorm原理</h3><p>原理：归一化</p>
+<p>思路：</p>
+<ol>
+<li><p>将当前层的输入batch范围内normalize成$\mu=0,\sigma^2=1$的分布。</p>
+<p>（但是还存在问题：数据表达能力的缺失）</p>
+</li>
+<li><p>解决数据表达能力的缺失的问题：引入了两个可学习（learnable）的参数$\gamma​$和$\beta​$，这两个参数的引入是为了恢复数据本身的表达能力，对规范化后的数据进行线性变换：$\tilde{Z}_{j}=\gamma_{j} \hat{Z}_{j}+\beta_{j}​$。（$\gamma​$和$\beta​$时两个向量）</p>
+</li>
+</ol>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><p><img src="https://pic1.zhimg.com/80/v2-084e9875d10896369e09af5a60e56250_720w.jpg" alt="img"></p>
+<p><img src="/2020/03/19/深度学习初探/C:/Users\Stuyxr\AppData\Roaming\Typora\typora-user-images\1584624527032.png" alt="1584624527032"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-c37bda8f138402cc7c3dd62c509d36f6_720w.jpg" alt="img"></p>
+<p>再学习得到$\gamma​$和$\beta​$。</p>
+<p>公式：</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&Z^{[l]}=W^{[l]} A^{[l-1]}+b^{[l]}\\
+&\mu=\frac{1}{m} \sum_{i=1}^{m} Z^{[l](i)}\\
+&\sigma^{2}=\frac{1}{m} \sum_{i=1}^{m}\left(Z^{[l](i)}-\mu\right)^{2}\\
+&\tilde{Z}^{[l]}=\gamma \cdot \frac{Z^{[l]}-\mu}{\sqrt{\sigma^{2}+\epsilon}}+\beta\\
+&A^{[l]}=g^{[l]}\left(\tilde{Z}^{[l]}\right)
+\end{aligned}</script><h3 id="test时怎么办"><a href="#test时怎么办" class="headerlink" title="test时怎么办"></a>test时怎么办</h3><p>计算$\mu$和$\sigma^2$的无偏估计。</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+\mu_{\text {test}}=\mathbb{E}\left(\mu_{\text {batch}}\right) \\
+\sigma_{\text {test}}^{2}=\frac{m}{m-1} \mathbb{E}\left(\sigma_{\text {batch}}^{2}\right)
+\end{array}</script><p>得到每个特征的均值与方差的无偏估计后，我们对test数据采用同样的normalization方法：</p>
+<script type="math/tex; mode=display">
+B N\left(X_{t e s t}\right)=\gamma \cdot \frac{X_{t e s t}-\mu_{t e s t}}{\sqrt{\sigma_{t e s t}^{2}+\epsilon}}+\beta</script><h1 id="VGG"><a href="#VGG" class="headerlink" title="VGG"></a>VGG</h1><h1 id="ResNet"><a href="#ResNet" class="headerlink" title="ResNet"></a>ResNet</h1><h1 id="GAN"><a href="#GAN" class="headerlink" title="GAN"></a>GAN</h1><h1 id="pix2pix"><a href="#pix2pix" class="headerlink" title="pix2pix"></a>pix2pix</h1><h1 id="CycleGAN"><a href="#CycleGAN" class="headerlink" title="CycleGAN"></a>CycleGAN</h1>
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/深度学习/" rel="tag"># 深度学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/12/Python-BeautifulSoup库爬虫小说/" rel="next" title="Python BeautifulSoup库爬虫小说">
+                <i class="fa fa-chevron-left"></i> Python BeautifulSoup库爬虫小说
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/18/基于paddlehub的cartoon face风格转换/" rel="prev" title="基于paddlehub的cartoon face风格转换">
+                基于paddlehub的cartoon face风格转换 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -474,8 +571,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -608,6 +714,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MLP"><span class="nav-number">1.</span> <span class="nav-text">MLP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CNN"><span class="nav-number">2.</span> <span class="nav-text">CNN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CNN-Structure"><span class="nav-number">2.1.</span> <span class="nav-text">CNN Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mini-Batch"><span class="nav-number">2.2.</span> <span class="nav-text">Mini-Batch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BatchNorm"><span class="nav-number">2.3.</span> <span class="nav-text">BatchNorm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Internal-Covariate-Shift"><span class="nav-number">2.3.1.</span> <span class="nav-text">Internal Covariate Shift</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BatchNorm原理"><span class="nav-number">2.3.2.</span> <span class="nav-text">BatchNorm原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">2.3.3.</span> <span class="nav-text">example</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test时怎么办"><span class="nav-number">2.3.4.</span> <span class="nav-text">test时怎么办</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VGG"><span class="nav-number">3.</span> <span class="nav-text">VGG</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ResNet"><span class="nav-number">4.</span> <span class="nav-text">ResNet</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GAN"><span class="nav-number">5.</span> <span class="nav-text">GAN</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pix2pix"><span class="nav-number">6.</span> <span class="nav-text">pix2pix</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CycleGAN"><span class="nav-number">7.</span> <span class="nav-text">CycleGAN</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -826,6 +949,36 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {equationNumbers: { autoNumber: "AMS" }}
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<style>
+.MathJax_Display {
+  overflow: auto hidden;
+}
+</style>
+
+    
   
 
 
