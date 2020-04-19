@@ -101,7 +101,7 @@
   <meta name="description" content="Life Recording.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Stuyxr&#39;s Blog">
-<meta property="og:url" content="http://stuyxr.com/tags/java/index.html">
+<meta property="og:url" content="http://stuyxr.com/tags/Java/index.html">
 <meta property="og:site_name" content="Stuyxr&#39;s Blog">
 <meta property="og:description" content="Life Recording.">
 <meta property="og:locale" content="zh-CN">
@@ -114,7 +114,7 @@
 
 
 
-  <link rel="canonical" href="http://stuyxr.com/tags/java/">
+  <link rel="canonical" href="http://stuyxr.com/tags/Java/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>标签: java | Stuyxr's Blog</title>
+  <title>标签: Java | Stuyxr's Blog</title>
   
 
 
@@ -333,7 +333,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>java<small>标签</small>
+        <h1>Java<small>标签</small>
         </h1>
       </div>
 
@@ -345,43 +345,17 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/06/07/Java-多线程与并发编程/" itemprop="url">
+          <a class="post-title-link" href="/2019/02/26/Java学习笔记 - 基础篇/" itemprop="url">
             
-              <span itemprop="name">Java 多线程与并发编程</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-07T14:10:45+08:00" content="2019-06-07">
-          06-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/02/SCLab2/" itemprop="url">
-            
-              <span itemprop="name">HITSC - LAB2</span>
+              <span itemprop="name">Java学习笔记 - 基础篇</span>
             
           </a>
         
       </h2>
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-02T11:24:18+08:00" content="2019-04-02">
-          04-02
+        <time class="post-time" itemprop="dateCreated" datetime="2019-02-26T18:43:37+08:00" content="2019-02-26">
+          02-26
         </time>
       </div>
 
@@ -440,7 +414,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -843,6 +817,32 @@
         ta.contentEditable = true;
         ta.readOnly = false;
         document.body.appendChild(ta);
+        range.selectNode(ta);
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ta.setSelectionRange(0, code.length);
+        var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
+        
+        ta.blur(); //For iOS
+        $(this).blur();
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn');
+        setTimeout(function () {
+          $b.text('复制');
+        }, 300);
+      }).append(e);
+    })
+  </script>
+
+
+  
+
+</body>
+</html>
+ody.appendChild(ta);
         range.selectNode(ta);
         sel.removeAllRanges();
         sel.addRange(range);
